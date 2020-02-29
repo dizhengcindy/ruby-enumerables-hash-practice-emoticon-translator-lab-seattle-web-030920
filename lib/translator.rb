@@ -15,11 +15,12 @@ def get_japanese_emoticon(file_path,we)
   # code goes here
   #translate it to its Japanese version
   data = load_library (file_path)
-  data["get_emoticon"][we]
+ 
   if !data["get_emoticon"][we]
   sorry_message= "Sorry, that emoticon was not found"
   sorry_message
   end
+  data["get_emoticon"][we]
 end
 
 def get_english_meaning(file_path,je)
