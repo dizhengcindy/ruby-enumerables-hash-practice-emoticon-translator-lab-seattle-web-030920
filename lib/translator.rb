@@ -28,6 +28,9 @@ def get_english_meaning(file_path,je)
   # code goes here
   #takes a Japanese emoticon and returns its meaning in English.
   data = load_library (file_path)
-  data["get_meaning"][je]
   
+  if data["get_meaning"][je]
+    data["get_meaning"][je]
+  else
+    
 end
