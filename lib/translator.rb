@@ -1,13 +1,14 @@
 # require modules here
 require 'yaml'
 def load_library (file_path)
-  result = {"get_meaning" => {}, "get_emoticon" => {}}
   data = YAML.load_file(file_path)
-  #has two keys, 'get_meaning' and 'get_emoticon'
-  # the keys inside the 'get_meaning' hash are the Japanese emoticons
-  #the emoticon keys inside the 'get_meaning' hash point to their meanings
-  
-  
+  result = {"get_meaning" => {}, "get_emoticon" => {}}
+  data.reduce do |memo, (key,array)|
+      result["get_meaning"][array[2]] = key.to_s
+      result["get_emoticon"][array[1]] = array[2]
+      memo
+  end
+  result
 end
 
 def get_japanese_emoticon(we)
