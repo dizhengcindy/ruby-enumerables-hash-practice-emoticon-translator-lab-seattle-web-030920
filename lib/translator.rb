@@ -14,8 +14,8 @@ end
 def get_japanese_emoticon(file_path,we)
   # code goes here
   #translate it to its Japanese version
-  
-  
+  data = load_library (file_path)
+  data["get_emoticon"][we]
 end
 
 def get_english_meaning(file_path,je)
