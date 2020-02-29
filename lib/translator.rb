@@ -11,12 +11,14 @@ def load_library (file_path)
   result
 end
 
-def get_japanese_emoticon(we)
+def get_japanese_emoticon(file_path,we)
   # code goes here
   #translate it to its Japanese version
+  
+  
 end
 
-def get_english_meaning(je)
+def get_english_meaning(file_path,je)
   # code goes here
   
   #takes a Japanese emoticon and returns its meaning in English.
