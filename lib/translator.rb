@@ -18,7 +18,8 @@ def get_japanese_emoticon(file_path,we)
   data["get_emoticon"][we]
   if !data["get_emoticon"][we]
   sorry_message= "Sorry, that emoticon was not found"
-end
+  sorry_message
+  end
 end
 
 def get_english_meaning(file_path,je)
